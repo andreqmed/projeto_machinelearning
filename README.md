@@ -41,7 +41,7 @@ ClassificacaoVinhos/
 ## 📦 Como executar localmente
 
 ## 🖥️ Clonando o projeto
-bash
+'''bash
 git clone https://github.com/seuusuario/ClassificacaoVinhos.git
 cd ClassificacaoVinhos
 
@@ -58,6 +58,8 @@ O script executa o pré-processamento, treina o modelo e exibe a acurácia.
 
 Mostra exemplos de previsões com os primeiros dados de teste.
 
+---
+
 ##📈 Melhorias Futuras
 
 Testar outros algoritmos: RandomForest, KNN, SVM
@@ -69,6 +71,10 @@ Aplicar validação cruzada
 Criar uma API para o modelo
 
 Desenvolver interface web simples com Streamlit
+
+
+---
+
 
 👥 Autores
 
