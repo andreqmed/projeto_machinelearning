@@ -44,7 +44,7 @@ ClassificacaoVinhos/
 ```bash
 git clone https://github.com/seuusuario/ClassificacaoVinhos.git
 cd ClassificacaoVinhos
-
+```
 ##🔧 1. Instalando dependências
 
 Pré-requisitos: Python 3.x e pip
