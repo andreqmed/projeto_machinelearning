@@ -41,7 +41,7 @@ ClassificacaoVinhos/
 ## 📦 Como executar localmente
 
 ## 🖥️ Clonando o projeto
-'''bash
+```bash
 git clone https://github.com/seuusuario/ClassificacaoVinhos.git
 cd ClassificacaoVinhos
 
