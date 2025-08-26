@@ -26,7 +26,7 @@ Aplicação que utiliza Machine Learning para classificar vinhos como **tintos (
 ---
 
 ## 📦 Estrutura do Projeto
-
+```
 ClassificacaoVinhos/
 ├── src/
 │ ├── preprocessamento.py # Pré-processamento do dataset
@@ -34,7 +34,7 @@ ClassificacaoVinhos/
 ├── main.py # Execução principal
 ├── data/ # Dataset de vinhos (CSV)
 └── README.md
-
+```
 
 ---
 
@@ -76,6 +76,6 @@ Desenvolver interface web simples com Streamlit
 ---
 
 
-👥 Autores
+## 👥 Autores
 
 Desenvolvido por André Queiroz como projeto de Machine Learning.
