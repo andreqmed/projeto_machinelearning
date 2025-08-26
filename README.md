@@ -45,13 +45,13 @@ ClassificacaoVinhos/
 git clone https://github.com/seuusuario/ClassificacaoVinhos.git
 cd ClassificacaoVinhos
 ```
-##🔧 1. Instalando dependências
+## 🔧 1. Instalando dependências
 
 Pré-requisitos: Python 3.x e pip
 
 pip install -r requirements.txt
 
-##🚀 2. Rodando o projeto
+## 🚀 2. Rodando o projeto
 python main.py
 
 O script executa o pré-processamento, treina o modelo e exibe a acurácia.
@@ -60,7 +60,7 @@ Mostra exemplos de previsões com os primeiros dados de teste.
 
 ---
 
-##📈 Melhorias Futuras
+## 📈 Melhorias Futuras
 
 Testar outros algoritmos: RandomForest, KNN, SVM
 
