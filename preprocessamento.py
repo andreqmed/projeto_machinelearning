@@ -1,35 +1,12 @@
 import pandas as pd
-
-#Metodos:
-
-def carregar_dataframe(caminho_dados):
-    return pd.read_csv(caminho_dados)
-
-def rename(df):
-    df.rename(columns = {'style':'tipo'}, inplace = True)
-
-    df['tipo'] = df['tipo'].replace('red',0)
-    df['tipo'] = df['tipo'].replace('white',1)
-    
-    return df
-
-df = rename(carregar_dataframe('data/wine_dataset.csv'))
-
-'''
-import pandas as pd
 import numpy as np
 
 #Metodos:
-import pandas as pd
-import numpy as np
-
-#Metodos:
-
 def carregar_dataframe(caminho_dados):
     return pd.read_csv(caminho_dados)
 
 def largura(df):
-    return pd.set_option('display.max_columns', 100)
+    return pd.set_option('display.max_columns', None)
 
 def rename(df):
     df.rename(columns =
@@ -43,6 +20,7 @@ def rename(df):
 
 def criando_vinho():
     valores_base = df.mean(numeric_only=True)
+
     print("Personalize seu vinho:")
     acidez_fixa = float(input(f"Acidez fixa (normal: {valores_base['Acidez_fixa']:.2f}): "))
     acidez_volatil = float(input(f"Acidez volátil (normal: {valores_base['Acidez_volatil']:.2f}): "))
@@ -74,10 +52,9 @@ def criando_vinho():
     return novo_vinho
     
 
-df = rename(carregar_dataframe('wine_dataset.csv'))
+df = rename(carregar_dataframe('data/wine_dataset.csv'))
 largura(df)
 caracteristicas = np.array([df.columns])
-# print(caracteristicas)
-# print(caracteristicas.size)
-'''
+
+
 

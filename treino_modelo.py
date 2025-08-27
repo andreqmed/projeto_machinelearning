@@ -1,7 +1,7 @@
 import pandas as pd 
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import ExtraTreesClassifier
-from data.preprocessamento import df  
+from sklearn.ensemble import ExtraTreesClassifier                                    
+from preprocessamento import df   
 
 #|Separando entre variaveis alvo(y) e preditora(x)
 def modelo_treino():
@@ -15,4 +15,3 @@ def modelo_treino():
 
 
 
-#print('Acuracia:',resultado)

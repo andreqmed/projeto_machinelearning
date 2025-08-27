@@ -1,33 +1,11 @@
-from data.preprocessamento import df
-from src.treino_modelo import modelo_treino
-import pandas as pd
-from sklearn.model_selection import train_test_split
-
-def main():
-    modelo, X_teste, y_teste = modelo_treino()
-    resultado = modelo.score(X_teste, y_teste)
-
-    print(f'Acuracia do modelo é de:{resultado:.2%}\n')
-    
-    print("Exemplo de predição:")
-    # print(modelo.predict(X_teste))
-    print(X_teste[400:403])
-    print(y_teste[400:403])
-    previsoes = modelo.predict(X_teste[400:403])
-    print(previsoes)
-
-if __name__ == "__main__":
-    main()
-
-'''
 from preprocessamento import df
 from preprocessamento import caracteristicas
+from preprocessamento import criando_vinho
 from treino_modelo import modelo_treino
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import numpy as np
-from preprocessamento import criando_vinho
-
+from IPython.display import display
 
 def main():
     modelo, X_teste, y_teste = modelo_treino()
@@ -36,23 +14,33 @@ def main():
     while True:
         print("\t\t MENU DE VINHOS\n")
         print("1- Ver exemplo de predição\n")
-        print("2- Comparar vinhos por caracteristicas\n")
+        print("2- Comparar 2 vinhos\n")
         print("3- Personalize as características do seu vinho (acidez, teor alcoólico, pH e mais). Descubra se ele seria um vinho tinto ou branco!\n")
         print("4- Mostrar acurácia do modelo\n")
-
-        escolha = int(input("escolha uma opção\n"))
+        print("5 - Sair\n")
+        escolha = int(input("escolha uma opção\n\n"))
         
         if(escolha == 1):
-            print("Exemplo de predição:")
-            #print(modelo.predict(X_teste)
-            print(X_teste[400:403])
-            print("Os resultados são")
-            print(y_teste[400:403].values)
+            print("Os vinhos a serem analisados são:\n")
+            display(f'{X_teste[400:403]}\n')
             previsoes = modelo.predict(X_teste[400:403])
-            print('Predição:0 é vinho vermelho e 1 tinto')
-            print(f'{previsoes}')
-            print("Predição correta\n")
+            print("O modelo previu os seguintes resultados:\n")
+            for prev in previsoes:
+                if(prev == 0):
+                    tipo = 'Tinto(0)'
+                   
+                else:
+                    tipo = 'Branco(1)'
+                print(f'Vinho -> {tipo}\n')
             
+            print("Os resultados corretos são:\n")
+            resposta = y_teste[400:403].values
+            for resp in resposta:
+                if(resp == 0):
+                    tipo = 'Tinto(0)'
+                else:
+                    tipo = 'Branco(1)'
+                print(f"Vinho -> {tipo}\n")  
             
         elif(escolha == 2):
             lista_indices = []
@@ -70,7 +58,7 @@ def main():
                 else:
                     tipo = 'Branco(1)'
                      
-                print(f"📌 Vinho {idx} → Previsão: {tipo}")
+                print(f"📌 Vinho {idx} → Previsão: {tipo}\n")
                 print(X_teste.iloc[idx])
             
         elif(escolha == 3):
@@ -85,6 +73,10 @@ def main():
             
         elif(escolha == 4):
             print(f'Acuracia do modelo é de:{resultado:.2%}\n')
+
+        elif(escolha == 5):
+            print("Programa encerrado\n")
+            break
             
         
     
@@ -93,4 +85,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-'''
