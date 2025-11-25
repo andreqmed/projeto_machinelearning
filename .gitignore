@@ -1,0 +1,14 @@
+# 1. Pastas de Cache e Ambiente
+__pycache__/
+*.pyc
+venv/
+.env
+
+# 2. Arquivos de Log e Output
+*.log
+*.csv.zip
+
+# 3. Pastas que serão criadas (Adicione-as para ignorar o conteúdo)
+/models/    # Modelos treinados (.pkl, .h5)
+/data/      # Idealmente apenas dados processados, mas ignoramos dados brutos/grandes.
+/notebooks/ # Arquivos temporários de EDA/Jupyter Notebooks
