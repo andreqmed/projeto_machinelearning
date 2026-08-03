@@ -26,17 +26,42 @@ Aplicação que utiliza Machine Learning para classificar vinhos como **tintos (
 ---
 
 ## 📦 Estrutura do Projeto
-```
-ClassificacaoVinhos/
+
+```text
+Wine_Classification/
+├── data/
+│   └── wine_dataset.csv
+├── models/
+├── notebooks/
+│   └── analise_exploratoria.ipynb
 ├── src/
-│ ├── preprocessamento.py # Pré-processamento do dataset
-│ └── treino_modelo.py # Treinamento do modelo ML
-├── main.py # Execução principal
-├── data/ # Dataset de vinhos (CSV)
-└── README.md
+│   ├── main.py
+│   ├── preprocessamento.py
+│   └── treino_modelo.py
+├── README.md
+├── requirements.txt
+└── .gitignore
 ```
 
 ---
+
+## 📓 Análise Exploratória
+
+O projeto inclui o notebook `notebooks/analise_exploratoria.ipynb`, que apresenta as principais etapas da análise exploratória do conjunto de dados, incluindo:
+
+- Visualização das primeiras linhas do dataset;
+- Informações e estatísticas descritivas;
+- Verificação de valores ausentes;
+- Distribuição dos tipos de vinho;
+- Pré-processamento dos dados;
+- Treinamento do modelo ExtraTreesClassifier;
+- Avaliação da acurácia;
+- Exemplo de predições realizadas pelo modelo.
+
+O notebook complementa a aplicação desenvolvida em `src/`, documentando o processo de análise e treinamento do modelo de Machine Learning.
+
+---
+
 
 ## 📦 Como executar localmente
 
@@ -75,6 +100,14 @@ Desenvolver interface web simples com Streamlit
 
 ---
 
+
+## 📊 Resultados
+
+O modelo foi treinado utilizando o algoritmo **ExtraTreesClassifier** da biblioteca Scikit-learn.
+
+Após o treinamento, o modelo apresentou alta acurácia na classificação de vinhos tintos e brancos, demonstrando que as características físico-químicas do dataset são suficientes para distinguir os dois tipos de vinho com excelente desempenho.
+
+---
 
 ## 👥 Autores
 
