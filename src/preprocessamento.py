@@ -52,9 +52,14 @@ def criando_vinho():
     return novo_vinho
     
 
-df = rename(carregar_dataframe('data/wine_dataset.csv'))
-largura(df)
-caracteristicas = np.array([df.columns])
+# df = rename(carregar_dataframe('data/wine_dataset.csv'))
+# largura(df)
+# caracteristicas = np.array([df.columns])
 
+import os
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CAMINHO_DADOS = os.path.join(BASE_DIR, "data", "wine_dataset.csv")
+
+df = rename(carregar_dataframe(CAMINHO_DADOS))
 
